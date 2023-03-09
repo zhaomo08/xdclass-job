@@ -1,0 +1,254 @@
+2023-03-09 22:31:21,220 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 55] Starting XdclassJobApplication using Java 11.0.12 on 192.168.0.100 with PID 41087 (/Users/mesay/GitHub_Project/xdclass-job/target/classes started by mesay in /Users/mesay/GitHub_Project/xdclass-job)
+2023-03-09 22:31:21,223 INFO [main] n.x.xdclassjob.XdclassJobApplication [SpringApplication.java : 659] No active profile set, falling back to default profiles: default
+2023-03-09 22:31:21,599 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8083 (http)
+2023-03-09 22:31:21,603 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:31:21,603 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2023-03-09 22:31:21,603 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2023-03-09 22:31:21,627 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2023-03-09 22:31:21,628 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 309 ms
+2023-03-09 22:31:21,652 INFO [main] n.x.xdclassjob.config.XxlJobConfig [XxlJobConfig.java : 47] >>>>>>>>>>> xxl-job config init.
+2023-03-09 22:31:21,789 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@7bbfc5ff[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:31:21,817 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:31:21,832 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8083 (http) with context path ''
+2023-03-09 22:31:21,838 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 61] Started XdclassJobApplication in 0.754 seconds (JVM running for 1.506)
+2023-03-09 22:31:21,870 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9997
+2023-03-09 22:31:21,879 ERROR [xxl-job, executor ExecutorRegistryThread] c.x.job.core.util.XxlJobRemotingUtil [XxlJobRemotingUtil.java : 139] Connection refused (Connection refused)
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-03-09 22:31:21,879 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused (Connection refused)), for url : http://127.0.0.1:8080/xxl-job-admin/api/registry, content=null]
+2023-03-09 22:31:51,855 ERROR [xxl-job, executor ExecutorRegistryThread] c.x.job.core.util.XxlJobRemotingUtil [XxlJobRemotingUtil.java : 139] Connection refused (Connection refused)
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-03-09 22:31:51,856 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused (Connection refused)), for url : http://127.0.0.1:8080/xxl-job-admin/api/registry, content=null]
+2023-03-09 22:32:21,852 ERROR [xxl-job, executor ExecutorRegistryThread] c.x.job.core.util.XxlJobRemotingUtil [XxlJobRemotingUtil.java : 139] Connection refused (Connection refused)
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-03-09 22:32:21,853 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused (Connection refused)), for url : http://127.0.0.1:8080/xxl-job-admin/api/registry, content=null]
+2023-03-09 22:32:51,853 ERROR [xxl-job, executor ExecutorRegistryThread] c.x.job.core.util.XxlJobRemotingUtil [XxlJobRemotingUtil.java : 139] Connection refused (Connection refused)
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-03-09 22:32:51,854 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused (Connection refused)), for url : http://127.0.0.1:8080/xxl-job-admin/api/registry, content=null]
+2023-03-09 22:33:21,861 ERROR [xxl-job, executor ExecutorRegistryThread] c.x.job.core.util.XxlJobRemotingUtil [XxlJobRemotingUtil.java : 139] Connection refused (Connection refused)
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:95)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-03-09 22:33:21,862 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused (Connection refused)), for url : http://127.0.0.1:8080/xxl-job-admin/api/registry, content=null]
+2023-03-09 22:38:52,119 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2023-03-09 22:39:22,132 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2023-03-09 22:39:52,140 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2023-03-09 22:40:22,151 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2023-03-09 22:40:52,162 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2023-03-09 22:41:22,176 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xdclass-shop', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=The access token is wrong., content=null]
+2023-03-09 22:41:51,074 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 55] Starting XdclassJobApplication using Java 11.0.12 on 192.168.0.100 with PID 41502 (/Users/mesay/GitHub_Project/xdclass-job/target/classes started by mesay in /Users/mesay/GitHub_Project/xdclass-job)
+2023-03-09 22:41:51,076 INFO [main] n.x.xdclassjob.XdclassJobApplication [SpringApplication.java : 659] No active profile set, falling back to default profiles: default
+2023-03-09 22:41:51,478 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8083 (http)
+2023-03-09 22:41:51,488 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:41:51,488 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2023-03-09 22:41:51,488 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2023-03-09 22:41:51,575 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2023-03-09 22:41:51,575 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 391 ms
+2023-03-09 22:41:51,636 INFO [main] n.x.xdclassjob.config.XxlJobConfig [XxlJobConfig.java : 47] >>>>>>>>>>> xxl-job config init.
+2023-03-09 22:41:51,845 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@abad89c[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:41:51,871 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:41:51,884 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8083 (http) with context path ''
+2023-03-09 22:41:51,890 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 61] Started XdclassJobApplication in 0.982 seconds (JVM running for 1.436)
+2023-03-09 22:41:51,914 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9997
+2023-03-09 22:44:36,311 INFO [xxl-rpc, EmbedServer bizThreadPool-1921114890] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 188] >>>>>>>>>>> xxl-job regist JobThread success, jobId:5, handler:com.xxl.job.core.handler.impl.MethodJobHandler@abad89c[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:44:36,311 INFO [Thread-6] n.x.xdclassjob.job.MyJobHandler [MyJobHandler.java : 38] init 方法调用成功
+2023-03-09 22:44:36,316 INFO [Thread-6] n.x.xdclassjob.job.MyJobHandler [MyJobHandler.java : 30]  execute 任务触发成功:2023-03-09T22:44:36.315803
+2023-03-09 22:46:09,426 INFO [Thread-6] n.x.xdclassjob.job.MyJobHandler [MyJobHandler.java : 42] destroy 方法调用成功
+2023-03-09 22:46:09,429 INFO [Thread-6] com.xxl.job.core.thread.JobThread [JobThread.java : 247] >>>>>>>>>>> xxl-job JobThread stoped, hashCode:Thread[Thread-6,10,main]
+2023-03-09 22:46:58,778 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2023-03-09 22:46:58,783 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-web', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-03-09 22:46:58,783 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2023-03-09 22:46:58,784 INFO [SpringApplicationShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-03-09 22:46:58,784 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2023-03-09 22:46:58,785 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2023-03-09 22:46:58,785 INFO [Thread-3] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2023-03-09 22:47:00,621 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 55] Starting XdclassJobApplication using Java 11.0.12 on 192.168.0.100 with PID 41615 (/Users/mesay/GitHub_Project/xdclass-job/target/classes started by mesay in /Users/mesay/GitHub_Project/xdclass-job)
+2023-03-09 22:47:00,622 INFO [main] n.x.xdclassjob.XdclassJobApplication [SpringApplication.java : 659] No active profile set, falling back to default profiles: default
+2023-03-09 22:47:01,008 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8083 (http)
+2023-03-09 22:47:01,012 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:47:01,013 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2023-03-09 22:47:01,013 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2023-03-09 22:47:01,036 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2023-03-09 22:47:01,036 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 305 ms
+2023-03-09 22:47:01,059 INFO [main] n.x.xdclassjob.config.XxlJobConfig [XxlJobConfig.java : 47] >>>>>>>>>>> xxl-job config init.
+2023-03-09 22:47:01,175 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@3aed69dd[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:47:01,202 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:47:01,216 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8083 (http) with context path ''
+2023-03-09 22:47:01,223 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 61] Started XdclassJobApplication in 0.757 seconds (JVM running for 1.141)
+2023-03-09 22:47:01,247 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9997
+2023-03-09 22:47:23,145 INFO [xxl-rpc, EmbedServer bizThreadPool-1788492472] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 188] >>>>>>>>>>> xxl-job regist JobThread success, jobId:5, handler:com.xxl.job.core.handler.impl.MethodJobHandler@3aed69dd[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:47:23,146 INFO [Thread-6] n.x.xdclassjob.job.MyJobHandler [MyJobHandler.java : 40] init 方法调用成功
+2023-03-09 22:47:23,161 INFO [Thread-6] n.x.xdclassjob.job.MyJobHandler [MyJobHandler.java : 31]  execute 任务触发成功:2023-03-09T22:47:23.160623
+2023-03-09 22:48:56,290 INFO [Thread-6] n.x.xdclassjob.job.MyJobHandler [MyJobHandler.java : 44] destroy 方法调用成功
+2023-03-09 22:48:56,292 INFO [Thread-6] com.xxl.job.core.thread.JobThread [JobThread.java : 247] >>>>>>>>>>> xxl-job JobThread stoped, hashCode:Thread[Thread-6,10,main]
+2023-03-09 22:51:53,193 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2023-03-09 22:51:53,195 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-web', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-03-09 22:51:53,195 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2023-03-09 22:51:53,195 INFO [SpringApplicationShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-03-09 22:51:53,195 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2023-03-09 22:51:53,196 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2023-03-09 22:51:53,196 INFO [Thread-3] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2023-03-09 22:52:27,423 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 55] Starting XdclassJobApplication using Java 11.0.12 on 192.168.0.100 with PID 41758 (/Users/mesay/GitHub_Project/xdclass-job/target/classes started by mesay in /Users/mesay/GitHub_Project/xdclass-job)
+2023-03-09 22:52:27,424 INFO [main] n.x.xdclassjob.XdclassJobApplication [SpringApplication.java : 659] No active profile set, falling back to default profiles: default
+2023-03-09 22:52:27,826 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8083 (http)
+2023-03-09 22:52:27,830 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:52:27,830 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2023-03-09 22:52:27,831 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2023-03-09 22:52:27,857 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2023-03-09 22:52:27,857 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 318 ms
+2023-03-09 22:52:27,880 INFO [main] n.x.xdclassjob.config.XxlJobConfig [XxlJobConfig.java : 47] >>>>>>>>>>> xxl-job config init.
+2023-03-09 22:52:28,002 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@ee8e7ff[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:52:28,029 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:52:28,044 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8083 (http) with context path ''
+2023-03-09 22:52:28,052 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 61] Started XdclassJobApplication in 0.79 seconds (JVM running for 1.174)
+2023-03-09 22:52:28,083 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9997
+2023-03-09 22:53:29,562 INFO [xxl-rpc, EmbedServer bizThreadPool-1549973754] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 188] >>>>>>>>>>> xxl-job regist JobThread success, jobId:5, handler:com.xxl.job.core.handler.impl.MethodJobHandler@ee8e7ff[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:53:29,562 INFO [Thread-6] n.x.xdclassjob.job.MyJobHandler [MyJobHandler.java : 40] init 方法调用成功
+2023-03-09 22:53:29,567 INFO [Thread-6] n.x.xdclassjob.job.MyJobHandler [MyJobHandler.java : 31]  execute 任务触发成功:2023-03-09T22:53:29.567462
+2023-03-09 22:54:01,051 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 55] Starting XdclassJobApplication using Java 11.0.12 on 192.168.0.100 with PID 41789 (/Users/mesay/GitHub_Project/xdclass-job/target/classes started by mesay in /Users/mesay/GitHub_Project/xdclass-job)
+2023-03-09 22:54:01,052 INFO [main] n.x.xdclassjob.XdclassJobApplication [SpringApplication.java : 659] No active profile set, falling back to default profiles: default
+2023-03-09 22:54:01,457 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8083 (http)
+2023-03-09 22:54:01,461 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:54:01,461 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2023-03-09 22:54:01,461 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2023-03-09 22:54:01,484 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2023-03-09 22:54:01,484 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 319 ms
+2023-03-09 22:54:01,507 INFO [main] n.x.xdclassjob.config.XxlJobConfig [XxlJobConfig.java : 47] >>>>>>>>>>> xxl-job config init.
+2023-03-09 22:54:01,629 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@61a2aeb7[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:54:01,657 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:54:01,671 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8083 (http) with context path ''
+2023-03-09 22:54:01,678 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 61] Started XdclassJobApplication in 0.776 seconds (JVM running for 1.158)
+2023-03-09 22:54:01,704 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9998
+2023-03-09 22:55:01,693 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 96] >>>>>>>>>>> xxl-job remoting server stop.
+2023-03-09 22:55:01,695 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 87] >>>>>>>>>>> xxl-job registry-remove success, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-web', registryValue='http://192.168.0.100:9998/'}, registryResult:ReturnT [code=200, msg=null, content=null]
+2023-03-09 22:55:01,695 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 105] >>>>>>>>>>> xxl-job, executor registry thread destory.
+2023-03-09 22:55:01,695 INFO [SpringApplicationShutdownHook] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 125] >>>>>>>>>>> xxl-job remoting server destroy success.
+2023-03-09 22:55:01,695 INFO [xxl-job, executor JobLogFileCleanThread] c.x.j.c.thread.JobLogFileCleanThread [JobLogFileCleanThread.java : 99] >>>>>>>>>>> xxl-job, executor JobLogFileCleanThread thread destory.
+2023-03-09 22:55:01,696 INFO [xxl-job, executor TriggerCallbackThread] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 98] >>>>>>>>>>> xxl-job, executor callback thread destory.
+2023-03-09 22:55:01,696 INFO [Thread-3] c.x.j.c.thread.TriggerCallbackThread [TriggerCallbackThread.java : 128] >>>>>>>>>>> xxl-job, executor retry callback thread destory.
+2023-03-09 22:55:03,440 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 55] Starting XdclassJobApplication using Java 11.0.12 on 192.168.0.100 with PID 41814 (/Users/mesay/GitHub_Project/xdclass-job/target/classes started by mesay in /Users/mesay/GitHub_Project/xdclass-job)
+2023-03-09 22:55:03,443 INFO [main] n.x.xdclassjob.XdclassJobApplication [SpringApplication.java : 659] No active profile set, falling back to default profiles: default
+2023-03-09 22:55:03,840 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 108] Tomcat initialized with port(s): 8083 (http)
+2023-03-09 22:55:03,844 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Initializing ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:55:03,845 INFO [main] o.a.catalina.core.StandardService [DirectJDKLog.java : 173] Starting service [Tomcat]
+2023-03-09 22:55:03,845 INFO [main] o.a.catalina.core.StandardEngine [DirectJDKLog.java : 173] Starting Servlet engine: [Apache Tomcat/9.0.53]
+2023-03-09 22:55:03,871 INFO [main] o.a.c.c.C.[Tomcat].[localhost].[/] [DirectJDKLog.java : 173] Initializing Spring embedded WebApplicationContext
+2023-03-09 22:55:03,871 INFO [main] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java : 290] Root WebApplicationContext: initialization completed in 323 ms
+2023-03-09 22:55:03,897 INFO [main] n.x.xdclassjob.config.XxlJobConfig [XxlJobConfig.java : 47] >>>>>>>>>>> xxl-job config init.
+2023-03-09 22:55:04,047 INFO [main] c.x.job.core.executor.XxlJobExecutor [XxlJobExecutor.java : 178] >>>>>>>>>>> xxl-job register jobhandler success, name:demoJobHandler, jobHandler:com.xxl.job.core.handler.impl.MethodJobHandler@2a47597[class net.xdclass.xdclassjob.job.MyJobHandler#execute]
+2023-03-09 22:55:04,075 INFO [main] o.a.coyote.http11.Http11NioProtocol [DirectJDKLog.java : 173] Starting ProtocolHandler ["http-nio-8083"]
+2023-03-09 22:55:04,089 INFO [main] o.s.b.w.e.tomcat.TomcatWebServer [TomcatWebServer.java : 220] Tomcat started on port(s): 8083 (http) with context path ''
+2023-03-09 22:55:04,095 INFO [main] n.x.xdclassjob.XdclassJobApplication [StartupInfoLogger.java : 61] Started XdclassJobApplication in 0.872 seconds (JVM running for 1.406)
+2023-03-09 22:55:04,118 INFO [Thread-4] com.xxl.job.core.server.EmbedServer [EmbedServer.java : 86] >>>>>>>>>>> xxl-job remoting server start success, nettype = class com.xxl.job.core.server.EmbedServer, port = 9997
+2023-03-09 22:58:34,190 ERROR [xxl-job, executor ExecutorRegistryThread] c.x.job.core.util.XxlJobRemotingUtil [XxlJobRemotingUtil.java : 139] Connection refused (Connection refused)
+java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:859)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:689)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1615)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1520)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:527)
+	at com.xxl.job.core.util.XxlJobRemotingUtil.postBody(XxlJobRemotingUtil.java:115)
+	at com.xxl.job.core.biz.client.AdminBizClient.registry(AdminBizClient.java:42)
+	at com.xxl.job.core.thread.ExecutorRegistryThread$1.run(ExecutorRegistryThread.java:48)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2023-03-09 22:58:34,192 INFO [xxl-job, executor ExecutorRegistryThread] c.x.j.c.t.ExecutorRegistryThread [ExecutorRegistryThread.java : 54] >>>>>>>>>>> xxl-job registry fail, registryParam:RegistryParam{registryGroup='EXECUTOR', registryKey='xxl-web', registryValue='http://192.168.0.100:9997/'}, registryResult:ReturnT [code=500, msg=xxl-rpc remoting error(Connection refused (Connection refused)), for url : http://127.0.0.1:8080/xxl-job-admin/api/registry, content=null]
